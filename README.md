@@ -1,6 +1,3 @@
-# building-a-soar-playbook-for-automated-incident-triage
-
-```markdown
 # Building a SOAR Playbook for Automated Incident Triage
 
 A NIST SP 800-61r2 and SANS Incident Handler's Handbook-aligned SOAR playbook for automated phishing incident triage, built for Splunk SOAR (Phantom).
@@ -43,44 +40,41 @@ This playbook addresses these by codifying enrichment, decision logic, and conta
 ## Incident Response Lifecycle Mapping
 
 Playbook phases are mapped against both the NIST SP 800-61r2 four-phase model and the SANS six-phase model:
+
 ```
-
-NIST SP 800-61r2 SANS Incident Handler's Handbook
-───────────────── ─────────────────────────────────
-Preparation → Preparation
-Detection & Analysis → Identification
-Containment, Eradication → Containment
-& Recovery → Eradication
-→ Recovery
-Post-Incident Activity → Lessons Learned
-
+NIST SP 800-61r2                SANS Incident Handler's Handbook
+─────────────────                ─────────────────────────────────
+Preparation                  →   Preparation
+Detection & Analysis         →   Identification
+Containment, Eradication     →   Containment
+  & Recovery                 →   Eradication
+                              →   Recovery
+Post-Incident Activity       →   Lessons Learned
 ```
 
 ## Playbook Workflow
 
 ```
-
 Alert Trigger (gateway / SIEM / user report)
-↓
+        ↓
 False-Positive Filter
-↓
+        ↓
 Automated Enrichment
-├── Sender reputation
-├── SPF / DKIM / DMARC validation
-├── IOC extraction and scoring
-├── Historical correlation
-└── Sandbox detonation
-↓
+  ├── Sender reputation
+  ├── SPF / DKIM / DMARC validation
+  ├── IOC extraction and scoring
+  ├── Historical correlation
+  └── Sandbox detonation
+        ↓
 Decision Logic (confidence-scored branching)
-↓
+        ↓
 Analyst Approval Gate (high-impact actions)
-↓
+        ↓
 Containment → Eradication → Recovery
-↓
+        ↓
 Documentation, Closure & Metrics
-↓
+        ↓
 Post-Incident Review / Playbook Feedback Loop
-
 ```
 
 ## Decision Logic Summary
@@ -117,12 +111,10 @@ This playbook covers phishing delivered via email (MITRE ATT&CK T1566 and sub-te
 ## Repository Structure
 
 ```
-
 .
 ├── docs/
-│ └── soar-phishing-triage-playbook.pdf # Final compiled report (LaTeX-generated)
-└── README.md # Project overview and documentation
-
+│   └── soar-phishing-triage-playbook.pdf   # Final compiled report (LaTeX-generated)
+└── README.md                                # Project overview and documentation
 ```
 
 ## Contact
@@ -130,4 +122,3 @@ This playbook covers phishing delivered via email (MITRE ATT&CK T1566 and sub-te
 GitHub: [anim-michael-asante](https://github.com/anim-michael-asante)
 LinkedIn: [michael-asante-anim](https://linkedin.com/in/michael-asante-anim)
 Email: animmichaelasante@gmail.com
-```
