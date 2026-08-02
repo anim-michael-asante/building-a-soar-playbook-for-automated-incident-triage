@@ -13,7 +13,7 @@
 3. [Methodology](#methodology)
 4. [Deliverable](#deliverable)
 5. [Tools and Environment](#tools-and-environment)
-6. [Evidence](#evidence)
+6. [Repository Contents](#repository-contents)
 7. [Lessons Learned](#lessons-learned)
 8. [References](#references)
 9. [Author](#author)
@@ -109,9 +109,13 @@ Every framework-tied claim in the report cites the specific document and section
 
 ---
 
-## Evidence
+## Repository Contents
 
-- `docs/soar-phishing-triage-playbook.pdf` -- final compiled playbook specification report
+| File | Description |
+|---|---|
+| `Final_Report.pdf` | Final compiled project report (NIST SP-formatted) |
+| `PlayBook- Building a SOAR Playbook for Automated Incident Triage.pdf` | Standalone SOAR playbook specification document |
+| `README.md` | This file |
 
 No live platform screenshots or execution logs are included, as this project is a design and specification deliverable rather than a deployed automation.
 
